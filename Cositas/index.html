@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./imgs/logo.png" alt="">
+        <ul class="menu">
+            <li>Galeria</li>
+            <li>Contacto</li>
+            <li>Ubicacion</li>
+        </ul>
+    </header>
+    <main class="HeroSection">
+        <div class="info">
+            <h1 class="title">Cositas</h1>
+            <p>Aprende, Disfruta y Diviertete</p>
+        </div>
+        <div class="background" ></div>
+        <div class="image__foregound">
+             <img id="b1" src="./imgs/bolitapastel.png" alt="">
+             <img id="b2" src="./imgs/bolitarosa.png" alt="">
+             <img id="b3" src="./imgs/bolitaverde.png" alt="">
+             <img id="b4" src="./imgs/bolitapastel.png" alt="">
+             <img id="b5" src="./imgs/bolita azul.png" alt="">
+             <img id="b6" src="./imgs/bolitapastel.png" alt="">
+             <img id="b7" src="./imgs/bolitapastel.png" alt="">
+             <img id="b8" src="./imgs/bolitaverde.png" alt="">
+             <img id="b9" src="./imgs/bolita azul.png" alt="">
+             <img id="b10" src="./imgs/bolitarosa.png" alt="">
+             <img id="b11" src="./imgs/bolitaverde.png" alt="">
+             <img id="b12" src="./imgs/bolitarosa.png" alt="">
+             <img id="b13" src="./imgs/bolitarosa.png" alt="">
+             <img id="b14" src="./imgs/bolita azul.png" alt="">
+        </div>
+        </div>
+    </main>
+
+    <section class="Logo">
+        <img src="./imgs/logo.png" alt="">
+    </section>
+
+    <section class="Galery">
+        <div class="container">
+            <div class="box box-1" style="--img: url(./imgs/niño4.jpeg);" ></div>
+            <div class="box box-2" style="--img: url(./imgs/niño2.jpeg);" ></div>
+            <div class="box box-3" style="--img: url(./imgs/niño1.jpeg);" ></div>
+            <div class="box box-4" style="--img: url(./imgs/niño3.jpeg);" ></div>
+            <div class="box box-5" style="--img: url(./imgs/niño5.jpeg);" ></div>
+        </div>
+        <div class="cinta"></div>
+    </section>
+    <section class="activities">
+
+        <div class="containter">
+
+        </div>
+    </section>
+    <section class="location">
+        
+    </section>
+    <section class="contact">
+
+    </section>
+    <script>
+        window.addEventListener('scroll', function() {
+            var container = document.querySelector('.HeroSection');
+            var content = document.querySelector('.image__foregound');
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            content.style.transform = 'translateY(' + scrollTop * -1 + 'px)';
+        });
+
+    </script>
+</body>
+</html>

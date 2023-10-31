@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
+
+/* 1. Use a more-intuitive box-sizing model. */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* Typographic tweaks! 
+3. Add accessible line-height 
+4. Improve text rendering */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    height: auto;
+    overflow-x: hidden;
+    background:  rgb(234, 246, 252);
+    
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Create a root stacking context */
+#root, #__next {
+    isolation: isolate;
+}
+
+  
+:root {
+    --color-text: #3a0ca3;
+    --color-heading: #f72585;
+    --color-heading-shadow: #921850;
+    --color-button: cyan;
+    --color-button-active: rgba(255,255,255,0.6);
+  }
+/*===========Header===============*/
+
+header{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    border-bottom: 1px solid;
+    border-bottom-color: #ccc;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));    
+}
+header img{
+    height: 67px;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+.menu {
+    color: #ffffff;
+    font-family: "chelsea market", sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end; 
+    list-style-type: none;
+    text-shadow: 0.2vh 0.2vh rgb(95, 95, 95);
+    margin-right: 1vw;
+  }
+ 
+.menu li {
+    padding: 10px;
+    cursor: pointer;
+  } 
+.menu li:hover{
+    color: var(--color-heading);
+    text-shadow: 0.27vh 0.27vh rgb(82, 81, 81);
+    transition: 0.6s;
+
+}
+/*===========Vista Principal===============*/
+.HeroSection{
+    height: auto;
+    width: 100%;  
+    position: relative;
+    perspective: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.HeroSection .background{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image:url("./imgs/Cupcake3.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 95vh; 
+    width: 100%; 
+    transform: translate(0px, 0px);
+    visibility: inherit;
+}
+
+  
+.image__foregound {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(4px) scale(0.5);
+  }
+
+  .image__foregound img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
+
+#b1{
+    top:82%;
+    left:30%;
+    width: 12%;
+    filter: brightness(0.8) blur(1px);    
+}
+#b2{
+    top:83%;
+    left:1%;
+    width: 10%;
+    filter: brightness(0.7) blur(1px);
+}
+#b3{
+    top:87%;
+    left:64%;
+    width: 11%;
+    filter: brightness(0.8) blur(1px);    
+}
+#b4{
+    top:54%;
+    left:85%;
+    width: 5%;
+    filter: brightness(0.8) blur(1px);
+}
+#b5{
+    top:78%;
+    left:90%;
+    width: 9%;
+    filter: brightness(0.8) blur(1px);
+}
+#b6{
+    top:30%;
+    left:66%;
+    width: 2%;
+    filter: brightness(0.9) blur(1px);
+}
+#b7{
+    top:27%;
+    left:26%;
+    width: 3%;
+    filter: brightness(0.8) blur(1px);
+}
+#b8{
+    top:32%;
+    left:78%;
+    width: 2.5%;
+    filter: brightness(0.8) blur(1px); 
+}
+
+#b9{
+    top:35%;
+    left:11%;
+    width: 4%;
+    filter: brightness(0.8) blur(1px);
+}
+
+#b10{
+    top:25%;
+    left:83%;
+    width: 3%;
+    filter: brightness(0.9) blur(0.5px);
+}
+#b11{
+    top:32%;
+    left:2%;
+    width: 2.5%;
+    filter: brightness(0.8) blur(1px); 
+}
+#b12{
+    top:55%;
+    left:16%;
+    width: 4%;
+    filter: brightness(0.8) blur(1px);
+}
+#b13{
+    top:45%;
+    left:77%;
+    width: 4%;
+    filter: brightness(0.85) blur(0.7px);
+}
+#b14{
+    top:67%;
+    left:77%;
+    width: 6%;
+    filter: brightness(0.85) blur(0.7px);
+}
+
+.info{
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.info .title{
+    margin: 0;
+    font-family: "Cherry Bomb One", sans-serif;
+    font-size: 12vw;
+    color: var(--color-heading);
+    align-self: center;
+
+    text-shadow:     0 1px 0 var(--color-heading-shadow),
+                       0 2px 0 var(--color-heading-shadow),
+                       0 3px 0 var(--color-heading-shadow),
+                       0 4px 0 var(--color-heading-shadow),
+                       0 5px 0 var(--color-heading-shadow),
+                       0 6px 0 var(--color-heading-shadow),
+                       0 7px 0 var(--color-heading-shadow),
+                       0 8px 0 var(--color-heading-shadow),
+      
+                       0 0 5px rgba(10,0,0,.05),
+                      0 1px 3px rgba(10,0,0,.2),
+                      0 3px 5px rgba(10,0,0,.2),
+                     0 5px 10px rgba(10,0,0,.2),
+                    0 10px 10px rgba(10,0,0,.2),
+                    0 20px 20px rgba(10,0,0,.3);
+    
+}
+
+.info p{
+    font-family: "chelsea market", sans-serif;
+    color: rgba(148, 231, 233, 0.8);
+    text-shadow: 0.2vh 0.2vh rgb(77, 76, 76);
+    font-size: 3vw;
+    align-self: center;
+}
+
+
+/*===========Galeria===============*/
+
+.Logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 35px;
+}
+
+
+.Galery{
+    /*background-color: rgb(215, 250, 248);*/
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+.Galery .cinta{
+    position: absolute;
+    background: #e4b8e2;
+    width: 100%;
+    height: 10vh;
+    z-index: 0;
+    top:40%;
+    transform: skewY(-10deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));    
+}
+
+.Galery .container {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 1.3em;
+	width: 1000px;
+	height: 500px;
+	transition: all 400ms;
+    z-index: 10;
+}
+
+.Galery .container:hover .box {
+	filter: grayscale(100%) opacity(70%);
+}
+
+.box {
+	position: relative;
+	background: var(--img) center center;
+	background-size: cover;
+	transition: all 400ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Galery .container .box:hover {
+	filter: grayscale(0%) opacity(100%);
+}
+
+.Galery .container:has(.box-1:hover) {
+	grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-2:hover) {
+	grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.Galery .container:has(.box-3:hover) {
+	grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.Galery .container:has(.box-4:hover) {
+	grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.Galery .container:has(.box-5:hover) {
+	grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.box:nth-child(odd) {
+	transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+	transform: translateY(16px);
+}
+
+.box:hover::after {
+	transform: translateY(0);
+	opacity: 1;
+	transition-delay: 400ms;
+}
+
+/*===========Actividades===============*/
+
+/*===========Ubicacion===============*/
+
+/*===========Contacto===============*/
+
+
+
+
+  @media screen and (max-width: 992px) {
+    body {
+        .HeroSection .background{
+            height: 70vh; 
+        }
+        .Galery .container {
+            gap: 0.5em;
+            width: 600px;
+            height: 300px;
+        }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+        .HeroSection .background{
+ 
+            height: 55vh; 
+
+        }
+        .Galery .container {
+            gap: 0.2em;
+            width: 550px;
+            height: 250px;
+        }
+    }
+  }
