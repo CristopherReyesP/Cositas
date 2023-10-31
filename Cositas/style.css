@@ -86,15 +86,17 @@ header img{
     margin-right: 1vw;
   }
  
-.menu li {
+.menu li,.menu li a {
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
+    color:inherit ;
   } 
+
 .menu li:hover{
     color: var(--color-heading);
     text-shadow: 0.27vh 0.27vh rgb(82, 81, 81);
     transition: 0.6s;
-
 }
 /*===========Vista Principal===============*/
 .HeroSection{
@@ -432,7 +434,11 @@ figure {
 
 /*===========Contacto===============*/
 
-
+footer{
+    background: #e4b8e2;
+    width: 2100%;
+    height: 20vh;
+}
 
 
   @media screen and (max-width: 992px) {
