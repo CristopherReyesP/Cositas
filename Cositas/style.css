@@ -373,8 +373,22 @@ header img{
 
 /*===========Actividades===============*/
 .activities{
-    display: block;
-    margin-top: 15vh;
+    margin-top: 10vh;
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    height:auto;
+    font-family: 'Playpen Sans', cursive;   
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 45vh) ;
+    grid-template-areas:
+    "title title title . . "
+    ". img1 img1 info1 info1  "
+    "img2 img2 info2 info2 .  "
+    ". img3 img3 info3 info3 "
+    "img4 img4 info4 info4 . ";
+    place-items: center;
+    column-gap: 1vh;
 }
 figure {
     --c: 50px;
@@ -396,41 +410,59 @@ figure {
     clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
   }
   
-  .article_1 img {
-    width: 300px;
-    height: 300px;
+  .info_0{
+    grid-area: title;
+  }
+  .article_1{
+    grid-area: img1;
+  }
+  .info_1{
+    grid-area: info1;
+  }
+  .article_2{
+    grid-area: img2;
+  }
+  .info_2{
+    grid-area: info2;
+  }
 
+  .article_3{
+    grid-area: img3;
+  }
+  .info_3{
+    grid-area: info3;
+  }
+  .article_4{
+    grid-area: img4;
+  }
+  .info_4{
+    grid-area: info4;
+  }
+  .article_1 img {
+    width: 250px;
+    aspect-ratio: 1;
+    grid-area: img1;
   }
   
   .article_2 img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    aspect-ratio: 1;
+    grid-area: img2;
+
   }
   
   .article_3 img {
-    width: 300px;
+    width: 250px;
     aspect-ratio: 1;
+    grid-area: img3;
+
   }
   .article_4 img {
-    width: 300px;
-    height: 300px;
-
-  }
-  
-  .article_5 img {
-    width: 300px;
-    height: 500px;
-
-  }
-  
-  .article_6 img {
-    width: 300px;
+    width: 250px;
     aspect-ratio: 1;
+    grid-area: img4;
   }
-  .article_7 img {
-    width: 300px;
-    height: 550px;
-  }
+  
   
   figure img {
     object-fit: cover;
