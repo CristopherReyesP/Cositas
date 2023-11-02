@@ -292,7 +292,7 @@ header img{
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin: 13vh 0;
     display: flex;
     justify-content: center;
 }
@@ -380,7 +380,7 @@ header img{
     height:auto;
     font-family: 'Playpen Sans', cursive;   
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 45vh) ;
+    grid-template-rows: 20vh repeat(4, 40vh) ;
     grid-template-areas:
     "title title title . . "
     ". img1 img1 info1 info1  "
@@ -388,7 +388,7 @@ header img{
     ". img3 img3 info3 info3 "
     "img4 img4 info4 info4 . ";
     place-items: center;
-    column-gap: 1vh;
+    gap: 1vh;
 }
 figure {
     --c: 50px;
@@ -441,28 +441,23 @@ figure {
   .article_1 img {
     width: 250px;
     aspect-ratio: 1;
-    grid-area: img1;
   }
   
   .article_2 img {
     width: 250px;
     aspect-ratio: 1;
-    grid-area: img2;
 
   }
   
   .article_3 img {
     width: 250px;
     aspect-ratio: 1;
-    grid-area: img3;
 
   }
   .article_4 img {
     width: 250px;
     aspect-ratio: 1;
-    grid-area: img4;
   }
-  
   
   figure img {
     object-fit: cover;
