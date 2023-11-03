@@ -380,7 +380,7 @@ header img{
     height:auto;
     font-family: 'Playpen Sans', cursive;   
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 20vh repeat(4, 40vh) ;
+    grid-template-rows: 8vh repeat(4, 40vh) ;
     grid-template-areas:
     "title title title . . "
     ". img1 img1 info1 info1  "
@@ -388,7 +388,7 @@ header img{
     ". img3 img3 info3 info3 "
     "img4 img4 info4 info4 . ";
     place-items: center;
-    gap: 1vh;
+    row-gap: 6vh;;
 }
 figure {
     --c: 50px;
@@ -398,18 +398,24 @@ figure {
     display: inline-block;
     padding: var(--p);
     background:
-      radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
-      radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
-      linear-gradient(#fff 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
-      linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
-      linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
-      radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
-      radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d)
-      ;
+    radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
+    radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
+    linear-gradient(#fff 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
+    linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
+    linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
+    radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
+    radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d);
     background-repeat: no-repeat;
     clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
   }
-  
+  .activities img{
+    width: 300px;
+    aspect-ratio: 1;
+  }
+  figure img {
+    object-fit: cover;
+  }
+
   .info_0{
     grid-area: title;
   }
@@ -438,30 +444,8 @@ figure {
   .info_4{
     grid-area: info4;
   }
-  .article_1 img {
-    width: 250px;
-    aspect-ratio: 1;
-  }
-  
-  .article_2 img {
-    width: 250px;
-    aspect-ratio: 1;
 
-  }
-  
-  .article_3 img {
-    width: 250px;
-    aspect-ratio: 1;
 
-  }
-  .article_4 img {
-    width: 250px;
-    aspect-ratio: 1;
-  }
-  
-  figure img {
-    object-fit: cover;
-  }
   
 /*===========Ubicacion===============*/
 
