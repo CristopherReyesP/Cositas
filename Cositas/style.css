@@ -378,7 +378,7 @@ header img{
     height:auto;
     font-family: 'Playpen Sans', cursive;   
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 8vh repeat(4, 55vh) ;
+    grid-template-rows: 8vh repeat(4, 1fr) ;
     grid-template-areas:
     "title title . . . "
     ". img1 img1 info1 info1  "
@@ -455,8 +455,14 @@ figure {
   
 /*===========Ubicacion===============*/
 .location{
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.location iframe{
+  width: 40%;
+  padding: 2vh;
 }
 /*===========Contacto===============*/
 
@@ -478,10 +484,7 @@ footer a{
   align-items: center;
 
 }
-footer :last-child{
-  width: 20vh;
-  height: auto;
-}
+
 .WhatsApp svg{
   margin: 10px;
   width: 20px;
@@ -489,7 +492,7 @@ footer :last-child{
   display: inline;
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 990px) {
     body {
         .HeroSection .background{
             height: 70vh; 
@@ -499,6 +502,19 @@ footer :last-child{
             width: 600px;
             height: 300px;
         }
+        .activities{
+          display: grid;
+          width: 90%; 
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 8vh repeat(4, 1fr) ;
+          grid-template-areas:
+          "title  . . "
+          ". img1 info1 "
+          "img2  info2 . "
+          ". img3  info3 "
+          "img4  info4 .";
+      }
+
     }
   }
   
@@ -514,5 +530,19 @@ footer :last-child{
             width: 550px;
             height: 250px;
         }
+
+        .activities{
+          display: grid;
+          width: 90%; 
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 8vh repeat(4, 1fr) ;
+          grid-template-areas:
+          "title  . "
+          "img1 info1 "
+          "img2  info2  "
+          "img3  info3 "
+          "img4  info4 ";
+      }
+
     }
   }
