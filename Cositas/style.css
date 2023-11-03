@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /* 1. Use a more-intuitive box-sizing model. */
 *, *::before, *::after {
@@ -241,7 +241,6 @@ header img{
     font-size: 12vw;
     color: var(--color-heading);
     align-self: center;
-
     text-shadow:     0 1px 0 var(--color-heading-shadow),
                        0 2px 0 var(--color-heading-shadow),
                        0 3px 0 var(--color-heading-shadow),
@@ -288,7 +287,6 @@ header img{
 /*===========Galeria===============*/
 
 .Galery{
-    /*background-color: rgb(215, 250, 248);*/
     position: relative;
     width: 100%;
     height: auto;
@@ -390,12 +388,13 @@ header img{
     place-items: center;
     row-gap: 5vh;
 }
-.activities article{
+.activities  article{
   justify-self: left;
 }
 .activities :first-child{
   justify-self: center;
 }
+
 
 figure {
     --c: 50px;
