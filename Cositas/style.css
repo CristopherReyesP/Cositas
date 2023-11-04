@@ -98,6 +98,15 @@ header img{
     color: var(--color-heading);
     transition: 0.6s;
 }
+
+#check{
+  display: none;
+}
+.bar-btn{
+  display: none;
+}
+
+
 /*===========Vista Principal===============*/
 .HeroSection{
     height: auto;
@@ -383,18 +392,19 @@ header img{
     grid-template-rows: 8vh repeat(4, 1fr) ;
     grid-template-areas:
     "title title . . . "
-    ". img1 img1 info1 info1  "
-    "img2 img2 info2 info2 .  "
-    ". img3 img3 info3 info3 "
-    "img4 img4 info4 info4 . ";
+    "img1 img1 info1 info1 . "
+    ". img2 img2 info2 info2   "
+    " img3 img3 info3 info3 ."
+    ". img4 img4 info4 info4 ";
     place-items: center;
     row-gap: 5vh;
+    column-gap: 1vh;
 }
 .activities  article{
   justify-self: left;
 }
 .activities :first-child{
-  justify-self: center;
+  font-size: 2.5vw;
 }
 
 
@@ -428,10 +438,10 @@ figure {
     grid-area: title;
   }
   .article_1{
-    grid-area: img1;
+    grid-area: img4;
   }
   .info_1{
-    grid-area: info1;
+    grid-area: info4;
   }
   .article_2{
     grid-area: img2;
@@ -441,16 +451,16 @@ figure {
   }
 
   .article_3{
-    grid-area: img3;
+    grid-area: img1;
   }
   .info_3{
-    grid-area: info3;
+    grid-area: info1;
   }
   .article_4{
-    grid-area: img4;
+    grid-area: img3;
   }
   .info_4{
-    grid-area: info4;
+    grid-area: info3;
   }
 
 
@@ -458,6 +468,7 @@ figure {
 /*===========Ubicacion===============*/
 .location{
   width: 100%;
+  margin-top: 5vw;
   display: flex;
   justify-content: flex-end;
 }
@@ -472,6 +483,7 @@ figure {
 footer{
     display: block;
     justify-content: space-between;    
+    font-size: 2vh;
     background: #e4b8e2;
     color: #ffffff;
     width: 100%;
@@ -481,7 +493,6 @@ footer{
 footer a{
      color: inherit;
      text-decoration: none;
-     font-size: 2vh;
      display: flex;
      align-items: center;
      width: 40%;
@@ -510,12 +521,39 @@ footer a{
           grid-template-rows: 8vh repeat(4, 1fr) ;
           grid-template-areas:
           "title  . . "
-          ". img1 info1 "
-          "img2  info2 . "
-          ". img3  info3 "
-          "img4  info4 .";
+          " img1 info1 ."
+          ". img2  info2  "
+          "img3  info3 ."
+          ". img4  info4 ";
+      }
+      .menu {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: auto;
+        top: 8vh;
+        color: #ffffff;
+        font-family: 'Playpen Sans', cursive;
+        font-size: 2vh;
+        list-style-type: none;
+        text-shadow: 0.15vh 0.15vh rgb(95, 95, 95);
+
+        border-bottom: 1px solid;
+        border-bottom-color: #ccc;
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3)); 
       }
 
+      .bar-btn {
+        width: 25px;
+        margin-right: 3vw;
+        display: block;
+      }
+      #check:checked ~ ul{
+        display: none;
+        }
     }
   }
   
@@ -544,6 +582,8 @@ footer a{
           "img3  info3 "
           "img4  info4 ";
       }
-
+      .bar-btn {
+        width: 20px;
+      }
     }
   }
